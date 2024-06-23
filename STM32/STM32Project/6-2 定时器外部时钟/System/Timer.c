@@ -4,16 +4,23 @@ void Timer_Init(void) {
 
 	// 1. RCC 开启时钟, 定时器的基准时钟和整个外设的工作时钟就都会同时打开
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 	
-	// 2. 选择时基单元的时钟源（对于定时中断，选择内部时钟源）
-	TIM_InternalClockConfig(TIM2);
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	
+	TIM_ETRClockMode2Config(TIM2, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_NonInverted, 0x09);
 	
 	// 3. 配置时基单元, 包括预分频器、自动重装器、计数模式等等
 	TIM_TimeBaseInitTypeDef TIM_TimBaseInitStructure;
 	TIM_TimBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
 	TIM_TimBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
-	TIM_TimBaseInitStructure.TIM_Period = 10000 - 1;
-	TIM_TimBaseInitStructure.TIM_Prescaler = 7200 - 1;
+	TIM_TimBaseInitStructure.TIM_Period = 10 - 1;
+	TIM_TimBaseInitStructure.TIM_Prescaler = 1 - 1;
 	TIM_TimBaseInitStructure.TIM_RepetitionCounter = 0;
 	TIM_TimeBaseInit(TIM2, &TIM_TimBaseInitStructure);
 	
@@ -37,6 +44,12 @@ void Timer_Init(void) {
 	// 6. 运行控制
 	TIM_Cmd(TIM2, ENABLE);
 	
+}
+
+uint16_t Timer_GetCounter(void) {
+
+	return TIM_GetCounter(TIM2);
+
 }
 
 /*
