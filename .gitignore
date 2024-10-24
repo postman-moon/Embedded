@@ -26,3 +26,4 @@
 JLinkLog.txt
 *.dbgconf
 
+build/*
