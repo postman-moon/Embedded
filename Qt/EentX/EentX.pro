@@ -12,14 +12,22 @@ SOURCES += \
     labelx.cpp \
     main.cpp \
     mainwidget.cpp \
+    pagedragevent.cpp \
     pageenterleave.cpp \
-    pagepress.cpp
+    pagekeyevent.cpp \
+    pagepress.cpp \
+    pagetimerevent.cpp \
+    texteditx.cpp
 
 HEADERS += \
     labelx.h \
     mainwidget.h \
+    pagedragevent.h \
     pageenterleave.h \
-    pagepress.h
+    pagekeyevent.h \
+    pagepress.h \
+    pagetimerevent.h \
+    texteditx.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -4,6 +4,10 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QEvent>
+#include <QDebug>
+#include <QPoint>
+#include <QMouseEvent>
 
 class PagePress : public QWidget
 {
@@ -12,6 +16,15 @@ public:
     explicit PagePress(QWidget *parent = nullptr);
 
 signals:
+
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
+private:
+    QWidget *widget;
+    QLabel *lbl;
+    QPoint pressPos;
+    QPoint wdPos;
 };
 
 #endif // PAGEPRESS_H

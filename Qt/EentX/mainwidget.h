@@ -10,6 +10,9 @@
 
 #include "pageenterleave.h"
 #include "pagepress.h"
+#include "pagekeyevent.h"
+#include "pagetimerevent.h"
+#include "pagedragevent.h"
 
 class MainWidget : public QWidget
 {
@@ -30,6 +33,9 @@ private:
 
     PageEnterLeave *pageEnterLeave;
     PagePress *pagePress;
+    PageKeyEvent *pageKeyEvent;
+    PageTimerEvent *pageTimerEvent;
+    PageDragEvent *pageDragEvent;
 
     void initNav();
     void initMain();

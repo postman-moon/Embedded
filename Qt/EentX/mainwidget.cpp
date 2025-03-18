@@ -92,4 +92,16 @@ void MainWidget::initMain()
 
     pagePress = new PagePress();
     stackedWidget->addWidget(pagePress);
+
+    // 键盘事件界面
+    pageKeyEvent = new PageKeyEvent();
+    stackedWidget->addWidget(pageKeyEvent);
+
+    // 定时器事件界面
+    pageTimerEvent = new PageTimerEvent();
+    stackedWidget->addWidget(pageTimerEvent);
+
+    // 拖放事件界面
+    pageDragEvent = new PageDragEvent();
+    stackedWidget->addWidget(pageDragEvent);
 }
