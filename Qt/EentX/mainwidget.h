@@ -13,6 +13,7 @@
 #include "pagekeyevent.h"
 #include "pagetimerevent.h"
 #include "pagedragevent.h"
+#include "pagepaint.h"
 
 class MainWidget : public QWidget
 {
@@ -36,6 +37,7 @@ private:
     PageKeyEvent *pageKeyEvent;
     PageTimerEvent *pageTimerEvent;
     PageDragEvent *pageDragEvent;
+    PagePaint *pagePaintEvent;
 
     void initNav();
     void initMain();

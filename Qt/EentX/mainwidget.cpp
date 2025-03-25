@@ -104,4 +104,8 @@ void MainWidget::initMain()
     // 拖放事件界面
     pageDragEvent = new PageDragEvent();
     stackedWidget->addWidget(pageDragEvent);
+
+    // 绘图事件界面
+    pagePaintEvent = new PagePaint();
+    stackedWidget->addWidget(pagePaintEvent);
 }

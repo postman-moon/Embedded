@@ -15,6 +15,7 @@ SOURCES += \
     pagedragevent.cpp \
     pageenterleave.cpp \
     pagekeyevent.cpp \
+    pagepaint.cpp \
     pagepress.cpp \
     pagetimerevent.cpp \
     texteditx.cpp
@@ -25,6 +26,7 @@ HEADERS += \
     pagedragevent.h \
     pageenterleave.h \
     pagekeyevent.h \
+    pagepaint.h \
     pagepress.h \
     pagetimerevent.h \
     texteditx.h
