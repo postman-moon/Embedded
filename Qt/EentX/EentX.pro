@@ -12,6 +12,7 @@ SOURCES += \
     labelx.cpp \
     main.cpp \
     mainwidget.cpp \
+    pagecontext.cpp \
     pagedragevent.cpp \
     pageenterleave.cpp \
     pagekeyevent.cpp \
@@ -23,6 +24,7 @@ SOURCES += \
 HEADERS += \
     labelx.h \
     mainwidget.h \
+    pagecontext.h \
     pagedragevent.h \
     pageenterleave.h \
     pagekeyevent.h \

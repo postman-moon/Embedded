@@ -1,0 +1,33 @@
+{
+    "configurations": [
+      {
+        "name": "Linux",
+        "includePath": [
+          "${workspaceFolder}/**",
+          "/home/wan/Qt5.14.2/5.14.2/gcc_64/include",
+          "/home/wan/Qt5.14.2/5.14.2/gcc_64/include/QtCore",
+          "/home/wan/Qt5.14.2/5.14.2/gcc_64/include/QtGui",
+          "/home/wan/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets",
+          "${workspaceFolder}/build/intermediate/ui"
+        ],
+        "defines": [
+          "QT_WIDGETS_LIB"
+        ],
+        "compilerPath": "/usr/bin/g++",
+        "intelliSenseMode": "gcc-x64",
+        "cppStandard": "c++11",
+        "browse": {
+          "path": [
+            "/home/wan/Qt5.14.2/5.14.2/gcc_64/include",
+            "/home/wan/Qt5.14.2/5.14.2/gcc_64/include/QtCore",
+            "/home/wan/Qt5.14.2/5.14.2/gcc_64/include/QtGui",
+            "/home/wan/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets",
+            "${workspaceFolder}/build/intermediate/ui"
+          ],
+          "limitSymbolsToIncludedHeaders": true
+        }
+      }
+    ],
+    "version": 4
+  }
+  

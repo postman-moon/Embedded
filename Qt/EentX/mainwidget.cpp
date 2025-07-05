@@ -108,4 +108,8 @@ void MainWidget::initMain()
     // 绘图事件界面
     pagePaintEvent = new PagePaint();
     stackedWidget->addWidget(pagePaintEvent);
+
+    // 右击事件界面
+    pageContext = new PageContext();
+    stackedWidget->addWidget(pageContext);
 }
